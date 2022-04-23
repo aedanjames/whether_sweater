@@ -8,6 +8,7 @@ RSpec.describe 'Background Image Service' do
 
   it 'returns an image based upon a search query', :vcr do
     image = BackgroundImageService.get_image("Denver")
+
     expect(image).to be_a Hash
     expect(image[:photos]).to be_a Array
     expect(image[:photos][0]).to be_a Hash
