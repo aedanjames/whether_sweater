@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=mapquest_api_key&location=Sheridan,Co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sat, 23 Apr 2022 00:41:39 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '4552'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Sat, 23 Apr 2022 00:41:39 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=466CE936DDB2228AF6EAC031AE9DE15C; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Sheridan,Co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Sheridan","adminArea5Type":"City","adminArea4":"Arapahoe
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282030120","unknownInput":"","type":"s","latLng":{"lat":39.64935,"lng":-105.025038},"displayLatLng":{"lat":39.64935,"lng":-105.025038},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=39.64935,-105.025038|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1565009240"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Sheridan
+        County","adminArea4Type":"County","adminArea3":"WY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282931951","unknownInput":"","type":"s","latLng":{"lat":44.795434,"lng":-106.955897},"displayLatLng":{"lat":44.795434,"lng":-106.955897},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=44.795434,-106.955897|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-1366532083"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Sheridan
+        County","adminArea4Type":"County","adminArea3":"MT","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932015","unknownInput":"","type":"s","latLng":{"lat":48.774396,"lng":-104.55908},"displayLatLng":{"lat":48.774396,"lng":-104.55908},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=48.774396,-104.55908|marker-sm-50318A-3&scalebar=true&zoom=9&rand=-469396006"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Sheridan
+        County","adminArea4Type":"County","adminArea3":"NE","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932095","unknownInput":"","type":"s","latLng":{"lat":42.716551,"lng":-102.45881},"displayLatLng":{"lat":42.716551,"lng":-102.45881},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=42.716551,-102.45881|marker-sm-50318A-4&scalebar=true&zoom=9&rand=-1510493939"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Sheridan
+        County","adminArea4Type":"County","adminArea3":"KS","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932210","unknownInput":"","type":"s","latLng":{"lat":39.357531,"lng":-100.441987},"displayLatLng":{"lat":39.357531,"lng":-100.441987},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=39.357531,-100.441987|marker-sm-50318A-5&scalebar=true&zoom=9&rand=-1988993353"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Sheridan
+        County","adminArea4Type":"County","adminArea3":"ND","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932217","unknownInput":"","type":"s","latLng":{"lat":47.485947,"lng":-100.438435},"displayLatLng":{"lat":47.485947,"lng":-100.438435},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=47.485947,-100.438435|marker-sm-50318A-6&scalebar=true&zoom=9&rand=185325695"}]}]}'
+  recorded_at: Sat, 23 Apr 2022 00:41:39 GMT
+recorded_with: VCR 6.1.0
