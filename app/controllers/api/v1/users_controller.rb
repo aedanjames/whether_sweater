@@ -19,10 +19,10 @@ private
   end
 
   def missing_credentials
-    render json: { data: { message: 'Invalid Email/Password' } }
+    render json: { data: { message: 'Invalid Email/Password' } }, status: 401
   end
 
   def email_taken
-    render json: { data: { message: 'Email has already been taken' } }
+    render json: { data: { message: 'Email has already been taken' } }, status: 401
   end
 end 
