@@ -9,6 +9,7 @@ RSpec.describe 'Weather Forecast Service' do
   it 'returns forecast data given longitude and latitude parameters', :vcr do
     data = {:lat=>39.644450, :lng=>-105.006450}
     forecast = WeatherForecastService.get_forecast(data[:lat], data[:lng])
+
     expect(forecast).to be_a Hash
     expect(forecast[:current]).to have_key(:dt)
     expect(forecast[:current]).to have_key(:sunrise)
