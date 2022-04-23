@@ -7,6 +7,7 @@ RSpec.describe 'WeatherForecastFacade' do
    forecast = WeatherForecastFacade.forecast(data[:lat], data[:lng])
 
    expect(forecast).to be_a Hash
+   expect(forecast[:current]).to_not have_key(:minutely)
    expect(forecast[:current]).to have_key(:dt)
    expect(forecast[:current]).to have_key(:sunrise)
    expect(forecast[:current]).to have_key(:sunset)
