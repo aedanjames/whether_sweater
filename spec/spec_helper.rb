@@ -79,3 +79,6 @@ RSpec.configure do |config|
 =end
 end
 require 'webmock/rspec'
+require 'simplecov'
+SimpleCov.start 'rails'
+SimpleCov.add_filter ['channels', 'jobs', 'mailers', 'models/application_record.rb']
