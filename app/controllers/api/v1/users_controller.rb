@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
         render json: UserSerializer.format_data(user), status: 201
       end 
     else 
-      return missing_credentials
+      return bad_credentials
     end 
   end 
 
@@ -18,7 +18,7 @@ private
     params.permit(:email, :password, :password_confirmation, :auth_token)
   end
 
-  def missing_credentials
+  def bad_credentials
     render json: { data: { message: 'Invalid Email/Password' } }, status: 401
   end
 
