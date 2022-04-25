@@ -1,5 +1,6 @@
 class WeatherForecastSerializer
   def self.weather(forecast)
+
     { "data":
       {
         "id": nil,
@@ -8,34 +9,34 @@ class WeatherForecastSerializer
          {
             "current_weather":
             {
-              "datetime": Time.at(forecast[:current][:dt]),
-              "temp": forecast[:current][:temp],
-              "feels_like": forecast[:current][:feels_like],
-              "humidity": forecast[:current][:humidity],
-              "sunrise": Time.at(forecast[:current][:sunrise]),
-              "sunset": Time.at(forecast[:current][:sunset]),
-              "uvi": forecast[:current][:uvi],
-              "visibility": forecast[:current][:visibility],
-              "conditions": forecast[:current][:weather][0][:description],
-              "icon": forecast[:current][:weather][0][:icon]
+              "datetime": forecast.datetime,
+              "temp": forecast.temp,
+              "feels_like": forecast.feels_like,
+              "humidity": forecast.humidity,
+              "sunrise": Time.at(forecast.sunrise),
+              "sunset": Time.at(forecast.sunset),
+              "uvi": forecast.uvi,
+              "visibility": forecast.visibility,
+              "conditions": forecast.conditions,
+              "icon": forecast.icon
             },
-            "daily_weather": forecast[:daily].shift(5).map do |day|
+            "daily_weather": forecast.daily_weather.map do |day|
                 {
-                  "datetime": Date.jd(day[:dt]),
-                  "sunrise": Time.at(day[:sunrise]),
-                  "sunset": Time.at(day[:sunset]),
-                  "max_temp": day[:temp][:max],
-                  "min_temp": day[:temp][:min],
-                  "conditions": day[:weather][0][:description],
-                  "icon": day[:weather][0][:icon]
+                  "datetime": day.datetime,
+                  "sunrise": day.sunrise,
+                  "sunset": day.sunset,
+                  "max_temp": day.max_temp,
+                  "min_temp": day.min_temp,
+                  "conditions": day.conditions,
+                  "icon": day.icon
                 }
             end,
-            "hourly_weather": forecast[:hourly].shift(8).map do |hour|
+            "hourly_weather": forecast.hourly_weather.map do |hour|
               {
-              "time": Time.at(hour[:dt]),
-              "temp": hour[:temp],
-              "conditions": hour[:weather][0][:description],
-              "icon": hour[:weather][0][:icon]
+              "time": hour.time,
+              "temp": hour.temp,
+              "conditions": hour.conditions,
+              "icon": hour.icon
               }
             end
           },
