@@ -6,12 +6,13 @@ class YelpService
     end
   end
 
-  def self.get_business(latitude, longitude, food)
+  def self.get_business(latitude, longitude, food, arrival_time)
     response = connection.get do |faraday|
       faraday.params['latitude'] = latitude
       faraday.params['longitude'] = longitude
       faraday.params['term'] = "#{food}"
       faraday.params['categories'] = ("#{food}, All")
+      faraday.params['open_at'] = arrival_time
     end
     JSON.parse(response.body, symbolize_names: true)
   end 

@@ -8,7 +8,8 @@ RSpec.describe 'Yelp Service' do
 
   it 'returns info about a business', :vcr do
     coordinates = LocationFacade.coordinates("Highland, California")
-    business = YelpService.get_business(coordinates[:lat], coordinates[:lng], "Chinese")
+    time = Time.now.to_i
+    business = YelpService.get_business(coordinates[:lat], coordinates[:lng], "Chinese", time)
 
     expect(business).to be_a Hash
     expect(business[:businesses]).to be_a Array
