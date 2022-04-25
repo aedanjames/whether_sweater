@@ -1,6 +1,6 @@
 class BackgroundImage
-  attr_reader 
   attr_reader :image_url, :source, :author, :logo
+  
   def initialize(data)
     @image_url = data[:photos][0][:url]
     @source = data[:photos][0][:photographer_url]
