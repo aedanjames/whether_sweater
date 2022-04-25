@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 25 Apr 2022 16:36:00 GMT
+      - Mon, 25 Apr 2022 17:47:11 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1051'
+      - '1053'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 25 Apr 2022 16:36:00 GMT
+      - Mon, 25 Apr 2022 17:47:11 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=7AE40A9918DEA341393CDA5601BE3713; Path=/; HttpOnly
+      - JSESSIONID=5FDAFFB1C613730C1E3E4802AF7F8B8F; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -52,8 +52,8 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Highland,
         California"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Highland","adminArea5Type":"City","adminArea4":"San
-        Bernardino County","adminArea4Type":"County","adminArea3":"CA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040602","unknownInput":"","type":"s","latLng":{"lat":34.113514,"lng":-117.189578},"displayLatLng":{"lat":34.113514,"lng":-117.189578},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=34.113514,-117.189578|marker-sm-50318A-1&scalebar=true&zoom=12&rand=84705461"}]}]}'
-  recorded_at: Mon, 25 Apr 2022 16:36:00 GMT
+        Bernardino County","adminArea4Type":"County","adminArea3":"CA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040602","unknownInput":"","type":"s","latLng":{"lat":34.113514,"lng":-117.189578},"displayLatLng":{"lat":34.113514,"lng":-117.189578},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=34.113514,-117.189578|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1852594883"}]}]}'
+  recorded_at: Mon, 25 Apr 2022 17:47:11 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/search?categories=Chinese,%20All&latitude=34.113514&longitude=-117.189578&term=Chinese
@@ -78,36 +78,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-769597b4ff-bbnrh; site=public_api_v3
-      Server:
-      - envoy
-      Ratelimit-Remaining:
-      - '4983'
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Resettime:
-      - '2022-04-26T00:00:00+00:00'
-      X-Zipkin-Id:
-      - c61a5d63727ac19b
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4968'
+      X-Routing-Service:
+      - routing-main--uswest2-7844c7f94c-n2gl5; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - d6ca4f39c12c158f
+      Ratelimit-Resettime:
+      - '2022-04-26T00:00:00+00:00'
+      Server:
+      - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-69-73-uswest2aprod
       X-Extlb:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-69-73-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 25 Apr 2022 16:36:00 GMT
+      - Mon, 25 Apr 2022 17:47:11 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8254-DEN
+      - cache-den8238-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -123,7 +123,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/ruis-shanghai-bistro-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 431, "categories": [{"alias": "shanghainese", "title": "Shanghainese"}],
         "rating": 4.5, "coordinates": {"latitude": 34.06991, "longitude": -117.21355},
-        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
         "1711 W Lugonia Ave", "address2": "Ste 101", "address3": "", "city": "Redlands",
         "zip_code": "92374", "country": "US", "state": "CA", "display_address": ["1711
         W Lugonia Ave", "Ste 101", "Redlands, CA 92374"]}, "phone": "+19093356770",
@@ -142,24 +142,13 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/red-chilli-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 530, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 4.0, "coordinates": {"latitude": 34.063911829919, "longitude": -117.22542559259},
-        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
         "2094 W Redlands Blvd", "address2": "Ste C", "address3": "", "city": "Redlands",
         "zip_code": "92373", "country": "US", "state": "CA", "display_address": ["2094
         W Redlands Blvd", "Ste C", "Redlands, CA 92373"]}, "phone": "+19097983929",
         "display_phone": "(909) 798-3929", "distance": 6427.933174545305}, {"id":
-        "Da-IVXbWYAGLsovFE2BKtg", "alias": "guang-lin-cafe-san-bernardino", "name":
-        "Guang Lin Cafe", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sJLfH1IPUWe5vyURBGXNqQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/guang-lin-cafe-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 191, "categories": [{"alias": "tradamerican", "title": "American
-        (Traditional)"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"},
-        {"alias": "chinese", "title": "Chinese"}], "rating": 4.5, "coordinates": {"latitude":
-        34.0997143, "longitude": -117.2510151}, "transactions": ["pickup"], "price":
-        "$", "location": {"address1": "157 S Del Rosa Dr", "address2": "", "address3":
-        "", "city": "San Bernardino", "zip_code": "92408", "country": "US", "state":
-        "CA", "display_address": ["157 S Del Rosa Dr", "San Bernardino, CA 92408"]},
-        "phone": "+19093827555", "display_phone": "(909) 382-7555", "distance": 5860.755606149528},
-        {"id": "vkNXOV5WiOt5hOCDte8zdw", "alias": "open-kitchen-redlands-2", "name":
-        "Open Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/w0PTRvu6zhlx2ygn7rx_vQ/o.jpg",
+        "vkNXOV5WiOt5hOCDte8zdw", "alias": "open-kitchen-redlands-2", "name": "Open
+        Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/w0PTRvu6zhlx2ygn7rx_vQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/open-kitchen-redlands-2?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 207, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 4.0, "coordinates": {"latitude": 34.0474324750769, "longitude":
@@ -177,17 +166,18 @@ http_interactions:
         E State St", "address2": "", "address3": "", "city": "Redlands", "zip_code":
         "92373", "country": "US", "state": "CA", "display_address": ["26 E State St",
         "Redlands, CA 92373"]}, "phone": "+19097922527", "display_phone": "(909) 792-2527",
-        "distance": 6400.474903948832}, {"id": "q5aujAsM5hB5Ye6MMC9nlQ", "alias":
-        "orchid-thai-restaurant-highland", "name": "Orchid Thai Restaurant", "image_url":
-        "https://s3-media2.fl.yelpcdn.com/bphoto/m0JG0BHdh1l4ohQU_SmgFQ/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/orchid-thai-restaurant-highland?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 467, "categories": [{"alias": "thai", "title": "Thai"}], "rating":
-        4.0, "coordinates": {"latitude": 34.121868, "longitude": -117.20965}, "transactions":
-        ["delivery"], "price": "$", "location": {"address1": "27266 Baseline St",
-        "address2": "", "address3": "", "city": "Highland", "zip_code": "92346", "country":
-        "US", "state": "CA", "display_address": ["27266 Baseline St", "Highland, CA
-        92346"]}, "phone": "+19098628060", "display_phone": "(909) 862-8060", "distance":
-        2068.1207826447758}, {"id": "32oquPYioWbvyVTJQI8rMg", "alias": "thai-spoon-restaurant-highland",
+        "distance": 6400.474903948832}, {"id": "Da-IVXbWYAGLsovFE2BKtg", "alias":
+        "guang-lin-cafe-san-bernardino", "name": "Guang Lin Cafe", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sJLfH1IPUWe5vyURBGXNqQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/guang-lin-cafe-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 191, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"},
+        {"alias": "chinese", "title": "Chinese"}], "rating": 4.5, "coordinates": {"latitude":
+        34.0997143, "longitude": -117.2510151}, "transactions": ["pickup"], "price":
+        "$", "location": {"address1": "157 S Del Rosa Dr", "address2": "", "address3":
+        "", "city": "San Bernardino", "zip_code": "92408", "country": "US", "state":
+        "CA", "display_address": ["157 S Del Rosa Dr", "San Bernardino, CA 92408"]},
+        "phone": "+19093827555", "display_phone": "(909) 382-7555", "distance": 5860.755606149528},
+        {"id": "32oquPYioWbvyVTJQI8rMg", "alias": "thai-spoon-restaurant-highland",
         "name": "Thai Spoon Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/0hlvVmgOuTSWJUIXhjxgSA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/thai-spoon-restaurant-highland?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 384, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
@@ -198,8 +188,17 @@ http_interactions:
         "Highland", "zip_code": "92346", "country": "US", "state": "CA", "display_address":
         ["7750 Palm Ave", "Ste H", "Highland, CA 92346"]}, "phone": "+19098628811",
         "display_phone": "(909) 862-8811", "distance": 1892.056977491375}, {"id":
-        "KP07HnXieHE0S2iOP_lZ1A", "alias": "china-town-fast-food-loma-linda", "name":
-        "China Town Fast Food", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/9qkAVKyYeamwVi_za56PmQ/o.jpg",
+        "q5aujAsM5hB5Ye6MMC9nlQ", "alias": "orchid-thai-restaurant-highland", "name":
+        "Orchid Thai Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/m0JG0BHdh1l4ohQU_SmgFQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/orchid-thai-restaurant-highland?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 467, "categories": [{"alias": "thai", "title": "Thai"}], "rating":
+        4.0, "coordinates": {"latitude": 34.121868, "longitude": -117.20965}, "transactions":
+        ["delivery"], "price": "$", "location": {"address1": "27266 Baseline St",
+        "address2": "", "address3": "", "city": "Highland", "zip_code": "92346", "country":
+        "US", "state": "CA", "display_address": ["27266 Baseline St", "Highland, CA
+        92346"]}, "phone": "+19098628060", "display_phone": "(909) 862-8060", "distance":
+        2068.1207826447758}, {"id": "KP07HnXieHE0S2iOP_lZ1A", "alias": "china-town-fast-food-loma-linda",
+        "name": "China Town Fast Food", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/9qkAVKyYeamwVi_za56PmQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/china-town-fast-food-loma-linda?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 96, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 3.0, "coordinates": {"latitude": 34.0485077351332, "longitude":
@@ -219,8 +218,18 @@ http_interactions:
         "zip_code": "92408", "country": "US", "state": "CA", "display_address": ["2150
         S Waterman Ave", "Ste C", "San Bernardino, CA 92408"]}, "phone": "+19097838928",
         "display_phone": "(909) 783-8928", "distance": 10031.212051437162}, {"id":
-        "3f3wrVjxOItrdr5l3hJ4wA", "alias": "little-dragon-chinese-restaurant-san-bernardino",
-        "name": "Little Dragon Chinese Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yUxKA6U8J5mfKyCRfGeevA/o.jpg",
+        "E1EWlvqFOSBepsT14IoxqA", "alias": "panda-bowl-redlands", "name": "Panda Bowl",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/w5tDMQDFL67d-Yt21hWXew/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panda-bowl-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 54, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.0, "coordinates": {"latitude": 34.0691233, "longitude": -117.1390149},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "1213
+        N Wabash Ave", "address2": "", "address3": "", "city": "Redlands", "zip_code":
+        "92374", "country": "US", "state": "CA", "display_address": ["1213 N Wabash
+        Ave", "Redlands, CA 92374"]}, "phone": "+19093890082", "display_phone": "(909)
+        389-0082", "distance": 6791.709903409266}, {"id": "3f3wrVjxOItrdr5l3hJ4wA",
+        "alias": "little-dragon-chinese-restaurant-san-bernardino", "name": "Little
+        Dragon Chinese Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yUxKA6U8J5mfKyCRfGeevA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/little-dragon-chinese-restaurant-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 124, "categories": [{"alias": "chinese", "title": "Chinese"}],
         "rating": 3.5, "coordinates": {"latitude": 34.1362571716309, "longitude":
@@ -229,92 +238,9 @@ http_interactions:
         "San Bernardino", "zip_code": "92404", "country": "US", "state": "CA", "display_address":
         ["178 E Highland Ave", "San Bernardino, CA 92404"]}, "phone": "+19098833663",
         "display_phone": "(909) 883-3663", "distance": 8949.080848980067}, {"id":
-        "8Wfd9Cs5Kvj5Ii9Z0ffpbA", "alias": "chapter-two-loma-linda", "name": "Chapter
-        Two", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/aTsaTdfpQYCkRA-zTVIQCQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/chapter-two-loma-linda?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 218, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
-        "mexican", "title": "Mexican"}, {"alias": "japanese", "title": "Japanese"}],
-        "rating": 4.5, "coordinates": {"latitude": 34.0629251, "longitude": -117.2599819},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
-        "24957 Redlands Blvd", "address2": "", "address3": "", "city": "Loma Linda",
-        "zip_code": "92354", "country": "US", "state": "CA", "display_address": ["24957
-        Redlands Blvd", "Loma Linda, CA 92354"]}, "phone": "+19094926556", "display_phone":
-        "(909) 492-6556", "distance": 8587.36414116758}, {"id": "E1EWlvqFOSBepsT14IoxqA",
-        "alias": "panda-bowl-redlands", "name": "Panda Bowl", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/w5tDMQDFL67d-Yt21hWXew/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/panda-bowl-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 54, "categories": [{"alias": "chinese", "title": "Chinese"}],
-        "rating": 3.0, "coordinates": {"latitude": 34.0691233, "longitude": -117.1390149},
-        "transactions": ["delivery"], "price": "$", "location": {"address1": "1213
-        N Wabash Ave", "address2": "", "address3": "", "city": "Redlands", "zip_code":
-        "92374", "country": "US", "state": "CA", "display_address": ["1213 N Wabash
-        Ave", "Redlands, CA 92374"]}, "phone": "+19093890082", "display_phone": "(909)
-        389-0082", "distance": 6791.709903409266}, {"id": "Zirdon-4LLCVy6vmMGoslw",
-        "alias": "china-king-san-bernardino", "name": "China King", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/RjTojMonqlmHnqUSd9A66Q/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/china-king-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 47, "categories": [{"alias": "chinese", "title": "Chinese"},
-        {"alias": "seafood", "title": "Seafood"}, {"alias": "soup", "title": "Soup"}],
-        "rating": 3.5, "coordinates": {"latitude": 34.166618, "longitude": -117.285546},
-        "transactions": ["delivery", "pickup"], "price": "$", "location": {"address1":
-        "4172 N Sierra Way", "address2": null, "address3": null, "city": "San Bernardino",
-        "zip_code": "92407", "country": "US", "state": "CA", "display_address": ["4172
-        N Sierra Way", "San Bernardino, CA 92407"]}, "phone": "+19098823628", "display_phone":
-        "(909) 882-3628", "distance": 10624.256272261864}, {"id": "S3K9Kaq3ywhojEygO1QApA",
-        "alias": "lotus-restaurant-san-bernardino", "name": "Lotus Restaurant", "image_url":
-        "https://s3-media2.fl.yelpcdn.com/bphoto/s_PAVfVcCXD_7MMpp29K6Q/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/lotus-restaurant-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 203, "categories": [{"alias": "vietnamese", "title": "Vietnamese"},
-        {"alias": "chinese", "title": "Chinese"}], "rating": 4.5, "coordinates": {"latitude":
-        34.12166, "longitude": -117.2803}, "transactions": ["delivery"], "price":
-        "$", "location": {"address1": "258 E Baseline St", "address2": "", "address3":
-        "", "city": "San Bernardino", "zip_code": "92404", "country": "US", "state":
-        "CA", "display_address": ["258 E Baseline St", "San Bernardino, CA 92404"]},
-        "phone": "+19093831526", "display_phone": "(909) 383-1526", "distance": 8406.003910321513},
-        {"id": "zYgbeWNAh2yPHnZOt-FbFg", "alias": "tasty-garden-san-bernardino-2",
-        "name": "Tasty Garden", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/gZ7enRy5sxWn3et7dwhQfg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/tasty-garden-san-bernardino-2?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 48, "categories": [{"alias": "chinese", "title": "Chinese"}],
-        "rating": 4.0, "coordinates": {"latitude": 34.1180908, "longitude": -117.2786551},
-        "transactions": ["pickup"], "price": "$", "location": {"address1": "1033 N
-        Waterman Ave", "address2": "Ste J", "address3": "", "city": "San Bernardino",
-        "zip_code": "92410", "country": "US", "state": "CA", "display_address": ["1033
-        N Waterman Ave", "Ste J", "San Bernardino, CA 92410"]}, "phone": "+19098853377",
-        "display_phone": "(909) 885-3377", "distance": 8119.537852097097}, {"id":
-        "Sio6CgXXIZItbBFHAXrUQQ", "alias": "beijing-express-san-bernardino", "name":
-        "Beijing Express", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/64IQUUVNdjXU8yxvTLD02Q/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/beijing-express-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 60, "categories": [{"alias": "chinese", "title": "Chinese"},
-        {"alias": "hawaiian", "title": "Hawaiian"}], "rating": 3.0, "coordinates":
-        {"latitude": 34.134987, "longitude": -117.241188}, "transactions": ["delivery"],
-        "price": "$", "location": {"address1": "2075 E Highland Ave", "address2":
-        "Unit E", "address3": "", "city": "San Bernardino", "zip_code": "92404", "country":
-        "US", "state": "CA", "display_address": ["2075 E Highland Ave", "Unit E",
-        "San Bernardino, CA 92404"]}, "phone": "+19098628882", "display_phone": "(909)
-        862-8882", "distance": 5296.532775657732}, {"id": "mZF5yrLaRhyfhc4cfLFfOw",
-        "alias": "hong-bao-kitchen-highland", "name": "Hong Bao Kitchen", "image_url":
-        "https://s3-media1.fl.yelpcdn.com/bphoto/zZROTrV65akqiCoQQiOh2A/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/hong-bao-kitchen-highland?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 73, "categories": [{"alias": "asianfusion", "title": "Asian
-        Fusion"}], "rating": 3.0, "coordinates": {"latitude": 34.150678, "longitude":
-        -117.229431}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
-        "777 San Manuel Blvd", "address2": "Level 1", "address3": "Yaamava'' Resort
-        & Casino", "city": "Highland", "zip_code": "92346", "country": "US", "state":
-        "CA", "display_address": ["777 San Manuel Blvd", "Level 1", "Yaamava'' Resort
-        & Casino", "Highland, CA 92346"]}, "phone": "+18003592464", "display_phone":
-        "(800) 359-2464", "distance": 5525.589614808305}, {"id": "zgNY1FiY2ulalNoMFLg1Mg",
-        "alias": "panda-express-highland-3", "name": "Panda Express", "image_url":
-        "https://s3-media2.fl.yelpcdn.com/bphoto/iffjI1uh18PutmACmr5NZA/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/panda-express-highland-3?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
-        "review_count": 124, "categories": [{"alias": "chinese", "title": "Chinese"},
-        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.0, "coordinates":
-        {"latitude": 34.1212749661815, "longitude": -117.199795665229}, "transactions":
-        ["delivery", "pickup"], "location": {"address1": "27720 Base Line Street",
-        "address2": null, "address3": null, "city": "Highland", "zip_code": "92346",
-        "country": "US", "state": "CA", "display_address": ["27720 Base Line Street",
-        "Highland, CA 92346"]}, "phone": "+19098638076", "display_phone": "(909) 863-8076",
-        "distance": 1275.761217792143}, {"id": "gOgAA5JPE0ncLqBxHuFmLw", "alias":
-        "thai-house-restaurant-redlands", "name": "Thai House Restaurant", "image_url":
-        "https://s3-media2.fl.yelpcdn.com/bphoto/U5F27Tdqaqhen4nTAZ6Zkw/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/thai-house-restaurant-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "gOgAA5JPE0ncLqBxHuFmLw", "alias": "thai-house-restaurant-redlands", "name":
+        "Thai House Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/U5F27Tdqaqhen4nTAZ6Zkw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/thai-house-restaurant-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
         "review_count": 781, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "chinese", "title": "Chinese"}, {"alias": "bars", "title": "Bars"}], "rating":
         4.0, "coordinates": {"latitude": 34.06326, "longitude": -117.21675}, "transactions":
@@ -322,7 +248,79 @@ http_interactions:
         "address2": "", "address3": "", "city": "Redlands", "zip_code": "92373", "country":
         "US", "state": "CA", "display_address": ["1824 W Redlands Blvd", "Redlands,
         CA 92373"]}, "phone": "+19097983143", "display_phone": "(909) 798-3143", "distance":
-        6116.022978751643}], "total": 51, "region": {"center": {"longitude": -117.189578,
-        "latitude": 34.113514}}}'
-  recorded_at: Mon, 25 Apr 2022 16:36:01 GMT
+        6116.022978751643}, {"id": "8Wfd9Cs5Kvj5Ii9Z0ffpbA", "alias": "chapter-two-loma-linda",
+        "name": "Chapter Two", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/aTsaTdfpQYCkRA-zTVIQCQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/chapter-two-loma-linda?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 218, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
+        "mexican", "title": "Mexican"}, {"alias": "japanese", "title": "Japanese"}],
+        "rating": 4.5, "coordinates": {"latitude": 34.0629251, "longitude": -117.2599819},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "24957 Redlands Blvd", "address2": "", "address3": "", "city": "Loma Linda",
+        "zip_code": "92354", "country": "US", "state": "CA", "display_address": ["24957
+        Redlands Blvd", "Loma Linda, CA 92354"]}, "phone": "+19094926556", "display_phone":
+        "(909) 492-6556", "distance": 8587.36414116758}, {"id": "Zirdon-4LLCVy6vmMGoslw",
+        "alias": "china-king-san-bernardino", "name": "China King", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/RjTojMonqlmHnqUSd9A66Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/china-king-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 47, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "seafood", "title": "Seafood"}, {"alias": "soup", "title": "Soup"}],
+        "rating": 3.5, "coordinates": {"latitude": 34.166618, "longitude": -117.285546},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "4172 N Sierra Way", "address2": null, "address3": null, "city": "San Bernardino",
+        "zip_code": "92407", "country": "US", "state": "CA", "display_address": ["4172
+        N Sierra Way", "San Bernardino, CA 92407"]}, "phone": "+19098823628", "display_phone":
+        "(909) 882-3628", "distance": 10624.256272261864}, {"id": "iAHA4Z4Q6aXQifiknt4DsQ",
+        "alias": "buffet-star-redlands", "name": "Buffet Star", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/2ESLuGHoochDdht8nkR6jg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/buffet-star-redlands?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 531, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "japanese", "title": "Japanese"}, {"alias": "buffets", "title":
+        "Buffets"}], "rating": 3.0, "coordinates": {"latitude": 34.0722856130359,
+        "longitude": -117.210747376206}, "transactions": ["delivery"], "price": "$$",
+        "location": {"address1": "9980 Alabama St", "address2": "", "address3": "",
+        "city": "Redlands", "zip_code": "92374", "country": "US", "state": "CA", "display_address":
+        ["9980 Alabama St", "Redlands, CA 92374"]}, "phone": "+19097928877", "display_phone":
+        "(909) 792-8877", "distance": 4981.620905580724}, {"id": "zYgbeWNAh2yPHnZOt-FbFg",
+        "alias": "tasty-garden-san-bernardino-2", "name": "Tasty Garden", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/gZ7enRy5sxWn3et7dwhQfg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/tasty-garden-san-bernardino-2?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 48, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 34.1180908, "longitude": -117.2786551},
+        "transactions": ["pickup"], "price": "$", "location": {"address1": "1033 N
+        Waterman Ave", "address2": "Ste J", "address3": "", "city": "San Bernardino",
+        "zip_code": "92410", "country": "US", "state": "CA", "display_address": ["1033
+        N Waterman Ave", "Ste J", "San Bernardino, CA 92410"]}, "phone": "+19098853377",
+        "display_phone": "(909) 885-3377", "distance": 8119.537852097097}, {"id":
+        "S3K9Kaq3ywhojEygO1QApA", "alias": "lotus-restaurant-san-bernardino", "name":
+        "Lotus Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/s_PAVfVcCXD_7MMpp29K6Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lotus-restaurant-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 203, "categories": [{"alias": "vietnamese", "title": "Vietnamese"},
+        {"alias": "chinese", "title": "Chinese"}], "rating": 4.5, "coordinates": {"latitude":
+        34.12166, "longitude": -117.2803}, "transactions": ["delivery"], "price":
+        "$", "location": {"address1": "258 E Baseline St", "address2": "", "address3":
+        "", "city": "San Bernardino", "zip_code": "92404", "country": "US", "state":
+        "CA", "display_address": ["258 E Baseline St", "San Bernardino, CA 92404"]},
+        "phone": "+19093831526", "display_phone": "(909) 383-1526", "distance": 8406.003910321513},
+        {"id": "mZF5yrLaRhyfhc4cfLFfOw", "alias": "hong-bao-kitchen-highland", "name":
+        "Hong Bao Kitchen", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/zZROTrV65akqiCoQQiOh2A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hong-bao-kitchen-highland?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 73, "categories": [{"alias": "asianfusion", "title": "Asian
+        Fusion"}], "rating": 3.0, "coordinates": {"latitude": 34.150678, "longitude":
+        -117.229431}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "777 San Manuel Blvd", "address2": "Level 1", "address3": "Yaamava'' Resort
+        & Casino", "city": "Highland", "zip_code": "92346", "country": "US", "state":
+        "CA", "display_address": ["777 San Manuel Blvd", "Level 1", "Yaamava'' Resort
+        & Casino", "Highland, CA 92346"]}, "phone": "+18003592464", "display_phone":
+        "(800) 359-2464", "distance": 5525.589614808305}, {"id": "Sio6CgXXIZItbBFHAXrUQQ",
+        "alias": "beijing-express-san-bernardino", "name": "Beijing Express", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/64IQUUVNdjXU8yxvTLD02Q/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/beijing-express-san-bernardino?adjust_creative=KbfegSDksm_Jh0keQqAHSg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=KbfegSDksm_Jh0keQqAHSg",
+        "review_count": 60, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hawaiian", "title": "Hawaiian"}], "rating": 3.0, "coordinates":
+        {"latitude": 34.134987, "longitude": -117.241188}, "transactions": ["delivery"],
+        "price": "$", "location": {"address1": "2075 E Highland Ave", "address2":
+        "Unit E", "address3": "", "city": "San Bernardino", "zip_code": "92404", "country":
+        "US", "state": "CA", "display_address": ["2075 E Highland Ave", "Unit E",
+        "San Bernardino, CA 92404"]}, "phone": "+19098628882", "display_phone": "(909)
+        862-8882", "distance": 5296.532775657732}], "total": 51, "region": {"center":
+        {"longitude": -117.189578, "latitude": 34.113514}}}'
+  recorded_at: Mon, 25 Apr 2022 17:47:11 GMT
 recorded_with: VCR 6.1.0
