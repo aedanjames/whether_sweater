@@ -1,5 +1,6 @@
 class BackgroundImageSerializer
   def self.image(image, location)
+
     { "data":
       {
         "id": nil,
@@ -9,13 +10,13 @@ class BackgroundImageSerializer
           "image":
           {
             "location": location,
-            "image_url": image[:photos][0][:url]
+            "image_url": image.image_url
           },
           "credit":
           {
-            "source": image[:photos][0][:photographer_url],
-            "author": image[:photos][0][:photographer],
-            "logo": image[:photos][0][:src][:tiny]
+            "source": image.source,
+            "author": image.author,
+            "logo": image.logo
           }
         }
       }
