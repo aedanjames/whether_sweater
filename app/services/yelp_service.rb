@@ -10,7 +10,8 @@ class YelpService
     response = connection.get do |faraday|
       faraday.params['latitude'] = latitude
       faraday.params['longitude'] = longitude
-      faraday.params['categories'] = "restaurants,#{food}"
+      faraday.params['term'] = "#{food}"
+      faraday.params['categories'] = ("#{food}, All")
     end
     JSON.parse(response.body, symbolize_names: true)
   end 

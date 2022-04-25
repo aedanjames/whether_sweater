@@ -28,6 +28,5 @@ RSpec.describe 'Yelp Service' do
       expect(business[:location][:state]).to be_a String
       expect(business[:location][:display_address]).to be_a Array
     end
-
   end
 end
