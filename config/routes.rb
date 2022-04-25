@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       get '/backgrounds', to: 'background_image#index'
       post '/users', to: 'users#create'
       post '/sessions', to: 'sessions#create'
+
+      get '/munchies', to: 'munchies#index'
     end
   end
 end
