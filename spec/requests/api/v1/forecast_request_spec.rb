@@ -41,4 +41,15 @@ RSpec.describe 'get /forecast' do
     expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:conditions)
     expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:icon)
   end
+
+  it 'returns a useful repsonse if location param is missing or empty', :vcr do 
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    get '/api/v1/forecast', headers: headers, params: { location: "" }
+    forecast = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(404)
+    expect(forecast).to be_a Hash
+    expect(forecast[:data][:message]).to eq(":location param missing")
+
+  end
 end

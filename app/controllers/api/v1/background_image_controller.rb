@@ -14,5 +14,5 @@ private
     else 
       render status: 404
     end 
-  end 
+  end
 end
