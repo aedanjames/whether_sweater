@@ -73,4 +73,35 @@ RSpec.describe 'session request' do
     expect(road_trip[:data]).to have_key(:message)
     expect(road_trip[:data][:message]).to eq("Invalid API Key")
   end
+
+  it 'returns useful response for impossible route', :vcr do
+    data = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+      "password_confirmation": "password"
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/users', headers: headers, params: JSON.generate(data)
+    user_register = JSON.parse(response.body, symbolize_names: true)
+    data_login = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/sessions', headers: headers, params: JSON.generate(data_login)
+    user = JSON.parse(response.body, symbolize_names: true)
+    body = {
+        "origin": "Denver,CO",
+        "destination": "Tokyo, Japan",
+        "api_key": user[:data][:attributes][:api_key]
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(body)
+
+    road_trip = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(404)
+    expect(road_trip[:data]).to have_key(:message)
+    expect(road_trip[:data][:message]).to eq("Impossible Route")
+  end
 end
