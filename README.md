@@ -1,24 +1,57 @@
-# README
+# Whether Sweater (Sweater Weather)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents 
+- [Overview](#overview)
+- [Goals Achieved](#goals-achieved)
+- [Configuration](#configuration)
+- [How To Use](#how-to-use)
+- [Endpoints](#endpoints)
+- [Contributors](#contributors)
+- [Database Design](#database-design)
+- [User Stories](#user-stories)
+- [Phases](#phases)
 
-Things you may want to cover:
+## Overview
+[Whether Sweater](https://github.com/aedanjames/whether_sweater) Whether Sweater is a Ruby on Rails Backend API based application. It follows restful convention and exposes endpoints for FE consumption. Current endpoints allow for a FE app to retrieve weather, and background images for a city. Register a user, to receive an API key, log in, and make a POST request to plan for road trips. 
 
-* Ruby version
+## Goals Achieved    
+* Expose API endpoints that provide unique functionality via interfacing response data from multiple 3rd party API requests. 
+* Follow RESTFUL convention. 
+* Provide useful error responses, with the intention of aiding FE developers' efforts to debug.
 
-* System dependencies
+## Configuration 
+|             |               |               |               |
+|   :----:    |    :----:     |    :----:     |    :----:     |
+| Ruby 2.7.x  | SQL           | SimpleCov     | Faraday       |
+| Rails 5.2.x | Figaro        | bcrypt        | VSCode        |
+| RSpec       | HTML5         | ShouldaMatcher| Webmock       |
+| Pry         | Github        | Git           | VCR           |
 
-* Configuration
+## Endpoints
+* Base URL 
+- Retrieve Weather For a City
+GET 
 
-* Database creation
+## Developer
 
-* Database initialization
+👤 **Aedan Yturralde** 
+- [GitHub](https://github.com/aedanjames)
+- [LinkedIn](https://www.linkedin.com/in/aedan-y/)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup for the use of the project
 
-* Deployment instructions
+1. A conveyor belt link will be sent out at project kickoff so that you can both fork and copy the project board on this base repo. 
 
-* ...
+## Local Setup for any other use
+
+1. Fork and Clone the repo
+2. Install gem packages: `bundle install`
+3. Setup the database: `rails db:create`
+
+
+## Versions
+
+- Ruby 2.7.2
+
+- Rails 5.2.6

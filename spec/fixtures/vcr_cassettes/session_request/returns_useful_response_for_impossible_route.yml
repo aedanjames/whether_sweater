@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 26 Apr 2022 15:46:30 GMT
+      - Tue, 26 Apr 2022 16:46:03 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1017'
+      - '1015'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 26 Apr 2022 15:46:30 GMT
+      - Tue, 26 Apr 2022 16:46:03 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=69D8C4D31C597032F763FB3F52CD3BBC; Path=/; HttpOnly
+      - JSESSIONID=58DC6F0A0C99C7D44BFD5508F61B3A8A; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -51,8 +51,8 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Tokyo,
-        Japan"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Tokyo","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"JP","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282817722","unknownInput":"","type":"s","latLng":{"lat":35.680071,"lng":139.768522},"displayLatLng":{"lat":35.680071,"lng":139.768522},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=35.680071,139.768522|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-2107207517"}]}]}'
-  recorded_at: Tue, 26 Apr 2022 15:46:31 GMT
+        Japan"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Tokyo","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"JP","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282817722","unknownInput":"","type":"s","latLng":{"lat":35.680071,"lng":139.768522},"displayLatLng":{"lat":35.680071,"lng":139.768522},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=mapquest_api_key&type=map&size=225,160&locations=35.680071,139.768522|marker-sm-50318A-1&scalebar=true&zoom=12&rand=669048340"}]}]}'
+  recorded_at: Tue, 26 Apr 2022 16:46:03 GMT
 - request:
     method: get
     uri: http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&key=mapquest_api_key&to=Tokyo,%20Japan
@@ -72,17 +72,17 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 26 Apr 2022 15:46:31 GMT
+      - Tue, 26 Apr 2022 16:46:03 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '278'
       Set-Cookie:
-      - JSESSIONID=B6F2876F7ED5E0E2ECBEA36F448A0B7B; Path=/directions; HttpOnly
+      - JSESSIONID=18A8EF9797D9534EA245032A3A1EAC07; Path=/directions; HttpOnly
       Expires:
       - Mon, 20 Dec 1998 01:00:00 GMT
       Last-Modified:
-      - Tue, 26 Apr 2022 15:46:31 GMT
+      - Tue, 26 Apr 2022 16:46:03 GMT
       Cache-Control:
       - no-cache, must-revalidate
       Pragma:
@@ -99,5 +99,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIiwiaW1hZ2VVcmwiOiJodHRwOi8vYXBpLm1xY2RuLmNvbS9yZXMvbXFsb2dvLmdpZiIsInRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 26 Apr 2022 15:46:31 GMT
+  recorded_at: Tue, 26 Apr 2022 16:46:03 GMT
 recorded_with: VCR 6.1.0
