@@ -10,7 +10,7 @@ class Api::V1::SessionsController < ApplicationController
   end 
 
 private 
-def bad_credentials
-  render json: { data: { message: 'Invalid Email/Password' } }, status: 401
-end
+  def bad_credentials
+    render json: { data: { message: 'Invalid Email/Password' } }, status: 401
+  end
 end 
