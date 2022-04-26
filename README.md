@@ -42,11 +42,11 @@
   - <h5>GET /api/v1/forecast</h5>
     - params[:location] required <br><br> 
     <u>Example Request</u><br> 
-    <code> GET https://boiling-caverns-62909.herokuapp.com?/api/v1/forecast?location=Denver</code><br><br>
+    <code>GET https://boiling-caverns-62909.herokuapp.com?/api/v1/forecast?location=Denver</code><br><br>
     <u>Example Response</u><br>
     
-    <code>{
-    "data": {
+    
+    <code>{"data": {
         "id": null,
         "type": "forecast",
         "attributes": {
@@ -167,10 +167,10 @@
 - Retrieve Background Image For a City
   - <h5>GET /api/v1/backgrounds</h5>  
   - params[:location] required <br><br>
-  - Example Request: <code> GET https://boiling-caverns-62909.herokuapp.com/api/v1/backgrounds?location=Denver</code><br><br>
+  - Example Request: <code>GET https://boiling-caverns-62909.herokuapp.com/api/v1/backgrounds?location=Denver</code><br><br>
   - Example Response, Status 200<br>
-  <code>{
-    "data": {
+
+    <code>{"data": {
         "id": null,
         "type": "image",
         "attributes": {
@@ -190,14 +190,15 @@
 ### Register User
 - <u>Register User</u>
   - <h5>POST /api/v1/users</h5>  
-  - :email, :password, :password_confirmation params expected in body <br>  
-<br> <code>{
+  - :email, :password, :password_confirmation params expected in body <br>
+<code>{
   "email": "whatevs@example.com",
   "password": "password",
   "password_confirmation": "password"</code>
 } <br><br>
   <u>Example Request</u><br> <code>POST https://boiling-caverns-62909.herokuapp.com/api/v1/users</code><br><br>
-  <u>Example Response, Status 201</u><br> <code>{
+  <u>Example Response, Status 201</u><br> 
+<code>{
     "data": {
         "type": "users",
         "id": 5,
@@ -208,13 +209,13 @@
     }
 }</code><br><br>
 <u>Error Messages</u><br>
-Email already taken, Status 401: <code>{
-    "data": {
+Email already taken, Status 401: 
+<code>{"data": {
         "message": "Email has already been taken"
     }
 }</code><br>
-Passwords Don't Match, Status 401: <code>{
-    "data": {
+Passwords Don't Match, Status 401: 
+<code>{"data": {
         "message": "Invalid Email/Password"
     }
 }</code>
@@ -223,7 +224,8 @@ Passwords Don't Match, Status 401: <code>{
 - <u>Log In Registered/Existing User</u>-
 - <h5>POST /api/v1/sessions</h5>
 - :email, :password params expected in body <br> 
-<br> <code>{
+<br> 
+<code>{
   "email": "whatevs@example.com",
   "password": "password"</code>
 } <br><br>
@@ -257,7 +259,7 @@ Invalid email/Password, Status 401: <code>{
 }</code><br><br>
     <u>Example Response, Status 200</u><br>
     <code>{
-    "data": {
+      "data": {
         "id": null,
         "type": "roadtrip",
         "attributes": {
