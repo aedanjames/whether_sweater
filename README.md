@@ -162,6 +162,10 @@
         }
     }
 }</code>
+
+<u>Error Messages</u><br>
+- Location param missing/empty, Status 401: 
+<code>{"data": {"message": ":location param missing or empty"}}</code><br>
 <br>
 ### Background
 - Retrieve Background Image For a City
@@ -181,11 +185,10 @@
             "credit": {
                 "source": "https://www.pexels.com/@thomasleeward",
                 "author": "Thomas Ward",
-                "logo": "https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
-            }
-        }
-    }
-}</code><br><br>
+                "logo": "https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"}}}}</code><br>
+<u>Error Messages</u><br>
+- Location param missing/empty, Status 401: 
+<code>{"data": {"message": ":location param missing or empty"}}</code><br><br>
 
 ### Register User
 - <u>Register User</u>
@@ -204,31 +207,19 @@
         "id": 5,
         "attributes": {
             "email": "developer@example.com",
-            "api_key": "YyiuB3t9uhg7rohcZXCPzzZYGAn"
-        }
-    }
-}</code><br><br>
+            "api_key": "YyiuB3t9uhg7rohcZXCPzzZYGAn"}}}</code><br>
 <u>Error Messages</u><br>
-Email already taken, Status 401: 
-<code>{"data": {
-        "message": "Email has already been taken"
-    }
-}</code><br>
-Passwords Don't Match, Status 401: 
-<code>{"data": {
-        "message": "Invalid Email/Password"
-    }
-}</code>
+- Email already taken, Status 401: 
+<code>{"data": {"message": "Email has already been taken"}}</code><br><br>
+- Passwords Don't Match, Status 401: 
+<code>{"data": {"message": "Invalid Email/Password"}}</code>
 
 ### Log In User
 - <u>Log In Registered/Existing User</u>-
 - <h5>POST /api/v1/sessions</h5>
 - :email, :password params expected in body <br> 
-<br> 
-<code>{
-  "email": "whatevs@example.com",
-  "password": "password"</code>
-} <br><br>
+<code>{"email": "whatevs@example.com",
+  "password": "password"}</code> <br><br>
 <u>Example Request</u><br> <code>POST https://boiling-caverns-62909.herokuapp.com/api/v1/sessions</code><br><br>
   <u>Example Response, Status 201</u><br>
   <code>{
@@ -237,26 +228,18 @@ Passwords Don't Match, Status 401:
         "id": 3,
         "attributes": {
             "email": "whatever@example.com",
-            "api_key": "f3egaegagegh34ya34534523"
-        }
-    }
-}</code><br><br>
+            "api_key": "f3egaegagegh34ya34534523"}}}</code><br><br>
 <u>Error Messages</u><br>
-Invalid email/Password, Status 401: <code>{
-    "data": {
-        "message": "Invalid Email/Password"
-    }<br><br>
+- Invalid email/Password, Status 401: <code>{
+    "data": {"message": "Invalid Email/Password"}</code><br>
 ### Create Road Trip
 -<u>POST request to create a Road Trip</u>-
   - <h5>POST /api/v1/road_trip</h5>
     - :origin, :destination, :api_key params required <br><br> 
     <u>Example Request</u><br> 
     <code> GET https://boiling-caverns-62909.herokuapp.com?/api/v1/road_trip<br>
-    body: {
-  "origin": "New York, NY",
-  "destination": "Los Angeles,CA",
-  "api_key": "XNzwMdZih8Tg98ehjdhn2SBA7rw"
-}</code><br><br>
+    body: {"origin": "New York, NY",
+    "destination": "Los Angeles,CA","api_key": "XNzwMdZih8Tg98ehjdhn2SBA7rw"}</code><br><br>
     <u>Example Response, Status 200</u><br>
     <code>{
       "data": {
@@ -268,17 +251,16 @@ Invalid email/Password, Status 401: <code>{
             "travel_time": "40:16:00",
             "weather_at_eta": {
                 "temperature": 59.81,
-                "conditions": "few clouds"
-            }
-        }
-    }
-}</code><br><br>
+                "conditions": "few clouds"}}}}</code><br><br>
 <u>Error Messages, Status 401</u><br>
-<code>{
-    "data": {
-        "message": "Invalid API Key"
-    }
-}</code>
+- Invalid API Key
+<code>{"data": {"message": "Invalid API Key"}}</code><br><br>
+- Missing/empty origin or api_key params
+<code>{ data: { message: ':origin or :api_key params missing or empty' } }</code><br><br>
+- Missing/empty destination param
+<code>{ data: { message: ':destination param missing or empty' } }</code><br><br>
+- Impossible route (assuming amphibious vehicles aren't in play)
+<code>{ data: { message: 'Impossible Route' } }</code>
 
 
 
