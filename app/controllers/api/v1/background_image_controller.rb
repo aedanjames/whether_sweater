@@ -1,5 +1,5 @@
 class Api::V1::BackgroundImageController < ApplicationController
-  before_action :fetch_image
+  before_action :params_check, :fetch_image
 
   def index
     image = BackgroundImageFacade.find_image(@location)
@@ -9,10 +9,12 @@ class Api::V1::BackgroundImageController < ApplicationController
 private 
 
   def fetch_image
-    if params[:location]
-      @location = params[:location]
-    else 
-      render status: 404
-    end 
+    @location = params[:location]
+  end
+
+  def params_check
+    if params[:location].nil? || params[:location].empty?
+      render json: { data: { message: ':location param missing' } }, status: 404
+    end
   end
 end

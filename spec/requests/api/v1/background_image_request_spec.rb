@@ -33,4 +33,11 @@ RSpec.describe 'forecast request' do
     expect(response).to_not be_successful
     expect(response.status).to eq(404)
   end
+
+  it 'returns 404 if missing or empty params', :vcr do
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    get '/api/v1/backgrounds', headers: headers, params: { photo: "" }
+    expect(response).to_not be_successful
+    expect(response.status).to eq(404)
+  end
 end
