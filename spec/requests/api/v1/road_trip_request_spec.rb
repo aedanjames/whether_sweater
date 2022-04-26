@@ -147,4 +147,72 @@ RSpec.describe 'session request' do
     expect(road_trip[:data][:attributes][:weather_at_eta][:temperature]).to be_a Float
     expect(road_trip[:data][:attributes][:weather_at_eta][:conditions]).to be_a String
   end
+
+  it 'returns a useful error when destination param is missing or empty', :vcr do
+    data = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+      "password_confirmation": "password"
+    }
+
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/users', headers: headers, params: JSON.generate(data)
+
+    user_register = JSON.parse(response.body, symbolize_names: true)
+    login_data = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/sessions', headers: headers, params: JSON.generate(login_data)
+    user = JSON.parse(response.body, symbolize_names: true)
+
+    body = {
+        "origin": "Denver,CO",
+        "destination": "",
+        "api_key": user[:data][:attributes][:api_key]
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(body)
+
+    road_trip = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(401)
+    expect(road_trip).to be_a Hash
+    expect(road_trip[:data][:message]).to eq(":destination param missing or empty")
+  end
+
+  it 'returns a useful error when origin or api_key param is missing or empty', :vcr do
+    data = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+      "password_confirmation": "password"
+    }
+
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/users', headers: headers, params: JSON.generate(data)
+
+    user_register = JSON.parse(response.body, symbolize_names: true)
+    login_data = {
+      "email": "scoopdoop@protonmail.com",
+      "password": "password",
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/sessions', headers: headers, params: JSON.generate(login_data)
+    user = JSON.parse(response.body, symbolize_names: true)
+
+    body = {
+        "origin": "Denver,CO",
+        "destination": "Sheridam CO",
+        "api_key": ""
+    }
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(body)
+
+    road_trip = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(401)
+    expect(road_trip).to be_a Hash
+    expect(road_trip[:data][:message]).to eq(":origin or :api_key params missing or empty")
+  end
 end

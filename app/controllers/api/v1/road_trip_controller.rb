@@ -1,5 +1,5 @@
 class Api::V1::RoadTripController < ApplicationController
-  before_action :validate_api_key, :fetch_coordinates
+  before_action :params_check, :validate_api_key, :fetch_coordinates
 
   def create
     road_trip = RoadTripFacade.road_trip(params[:origin], params[:destination])
@@ -15,13 +15,23 @@ class Api::V1::RoadTripController < ApplicationController
   end
 
 private
+
+
+  def params_check
+    if params[:origin].nil? || params[:origin].empty? || params[:api_key].nil? || params[:api_key].empty?
+      render json: { data: { message: ':origin or :api_key params missing or empty' } }, status: 401
+    end
+  end
+
   def validate_api_key
     @user = User.find_by(auth_token: params[:api_key])
   end
 
   def fetch_coordinates
-    if params[:destination]
+    if params[:destination].present?
       @coordinates = LocationFacade.coordinates(params[:destination])
+    else 
+      render json: { data: { message: ':destination param missing or empty' } }, status: 401
     end 
   end
 
