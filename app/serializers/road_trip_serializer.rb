@@ -12,8 +12,8 @@ class RoadTripSerializer
           "travel_time": road_trip.travel_time,
           "weather_at_eta":
           {
-            "temperature": forecast.hourly_weather[road_trip.hours_to_arrival].temp,
-            "conditions": forecast.hourly_weather[road_trip.hours_to_arrival].conditions
+            "temperature": forecast.hourly_weather[road_trip.hours_to_arrival_index].temp,
+            "conditions": forecast.hourly_weather[road_trip.hours_to_arrival_index].conditions
           }
         }
       }

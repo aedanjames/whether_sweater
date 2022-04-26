@@ -13,7 +13,7 @@ class RoadTrip
     "#{hours} hours, #{minutes} minutes"
   end
 
-  def hours_to_arrival
+  def hours_to_arrival_index
     minutes_rounded = 0
     hours = @travel_time.slice(0..1).to_i
     minutes = @travel_time.slice(3..4).to_i
