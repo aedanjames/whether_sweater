@@ -4,7 +4,6 @@
 - [Overview](#overview)
 - [Goals Achieved](#goals-achieved)
 - [Configuration](#configuration)
-- [How To Use](#how-to-use)
 - [Endpoints](#table-of-endpoints)
 - [Developer](#developer)
 - [Versions](#versions)
@@ -45,8 +44,8 @@
     <code>GET https://boiling-caverns-62909.herokuapp.com?/api/v1/forecast?location=Denver</code><br><br>
     <u>Example Response</u><br>
     
-    
-    <code>{"data": {
+```
+    {"data": {
         "id": null,
         "type": "forecast",
         "attributes": {
@@ -161,20 +160,23 @@
             ]
         }
     }
-}</code>
+}
+```
 
 <u>Error Messages</u><br>
 - Location param missing/empty, Status 401: 
 <code>{"data": {"message": ":location param missing or empty"}}</code><br>
 <br>
-### Background
-- Retrieve Background Image For a City
-  - <h5>GET /api/v1/backgrounds</h5>  
-  - params[:location] required <br><br>
-  - Example Request: <code>GET https://boiling-caverns-62909.herokuapp.com/api/v1/backgrounds?location=Denver</code><br><br>
-  - Example Response, Status 200<br>
 
-    <code>{"data": {
+### Background
+-<u>Retrieve Background Image For a City</u>-
+  - <h5>GET /api/v1/backgrounds</h5>  
+    - params[:location] required <br><br>
+    <u>Example Request</u><br>
+    <code>GET https://boiling-caverns-62909.herokuapp.com/api/v1/backgrounds?location=Denver</code><br><br>
+    <u>Example Response</u><br>
+```
+    {"data": {
         "id": null,
         "type": "image",
         "attributes": {
@@ -185,7 +187,9 @@
             "credit": {
                 "source": "https://www.pexels.com/@thomasleeward",
                 "author": "Thomas Ward",
-                "logo": "https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"}}}}</code><br>
+                "logo": "https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"}}}}
+```                
+<br>
 <u>Error Messages</u><br>
 - Location param missing/empty, Status 401: 
 <code>{"data": {"message": ":location param missing or empty"}}</code><br><br>
@@ -194,14 +198,18 @@
 - <u>Register User</u>
   - <h5>POST /api/v1/users</h5>  
   - :email, :password, :password_confirmation params expected in body <br>
-<code>{
+```
+{
   "email": "whatevs@example.com",
   "password": "password",
-  "password_confirmation": "password"</code>
-} <br><br>
+  "password_confirmation": "password"
+} 
+```
+<br><br>
   <u>Example Request</u><br> <code>POST https://boiling-caverns-62909.herokuapp.com/api/v1/users</code><br><br>
   <u>Example Response, Status 201</u><br> 
-<code>{
+```
+{
     "data": {
         "type": "users",
         "id": 5,
@@ -212,23 +220,30 @@
 - Email already taken, Status 401: 
 <code>{"data": {"message": "Email has already been taken"}}</code><br><br>
 - Passwords Don't Match, Status 401: 
-<code>{"data": {"message": "Invalid Email/Password"}}</code>
+<code>{"data": {"message": "Invalid Email/Password"}}
+```
 
 ### Log In User
 - <u>Log In Registered/Existing User</u>-
 - <h5>POST /api/v1/sessions</h5>
 - :email, :password params expected in body <br> 
-<code>{"email": "whatevs@example.com",
-  "password": "password"}</code> <br><br>
+```
+{"email": "whatevs@example.com",
+  "password": "password"}
+```
+<br><br>
 <u>Example Request</u><br> <code>POST https://boiling-caverns-62909.herokuapp.com/api/v1/sessions</code><br><br>
   <u>Example Response, Status 201</u><br>
-  <code>{
+```
+  {
     "data": {
         "type": "users",
         "id": 3,
         "attributes": {
             "email": "whatever@example.com",
-            "api_key": "f3egaegagegh34ya34534523"}}}</code><br><br>
+            "api_key": "f3egaegagegh34ya34534523"}}}
+```
+<br><br>
 <u>Error Messages</u><br>
 - Invalid email/Password, Status 401: <code>{
     "data": {"message": "Invalid Email/Password"}</code><br>
@@ -237,11 +252,15 @@
   - <h5>POST /api/v1/road_trip</h5>
     - :origin, :destination, :api_key params required <br><br> 
     <u>Example Request</u><br> 
-    <code> GET https://boiling-caverns-62909.herokuapp.com?/api/v1/road_trip<br>
+    <code> GET https://boiling-caverns-62909.herokuapp.com?/api/v1/road_trip</code><br>
+```
     body: {"origin": "New York, NY",
-    "destination": "Los Angeles,CA","api_key": "XNzwMdZih8Tg98ehjdhn2SBA7rw"}</code><br><br>
+    "destination": "Los Angeles,CA","api_key": "XNzwMdZih8Tg98ehjdhn2SBA7rw"}
+```    
+<br><br>
     <u>Example Response, Status 200</u><br>
-    <code>{
+```
+    {
       "data": {
         "id": null,
         "type": "roadtrip",
@@ -251,7 +270,9 @@
             "travel_time": "40:16:00",
             "weather_at_eta": {
                 "temperature": 59.81,
-                "conditions": "few clouds"}}}}</code><br><br>
+                "conditions": "few clouds"}}}}
+```
+<br><br>
 <u>Error Messages, Status 401</u><br>
 - Invalid API Key
 <code>{"data": {"message": "Invalid API Key"}}</code><br><br>
